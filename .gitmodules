@@ -4,3 +4,6 @@
 [submodule "tfg-elastest-sut-back"]
 	path = tfg-elastest-sut-back
 	url = https://github.com/DavidCorreas/tfg-elastest-sut-back.git
+[submodule "tfg-elastest-sut-cordova_app"]
+	path = tfg-elastest-sut-cordova_app
+	url = https://github.com/DavidCorreas/tfg-elastest-sut-cordova_app.git
