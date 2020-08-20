@@ -1,0 +1,6 @@
+[submodule "tfg-elastest-sut-front"]
+	path = tfg-elastest-sut-front
+	url = https://github.com/DavidCorreas/tfg-elastest-sut-front.git
+[submodule "tfg-elastest-sut-back"]
+	path = tfg-elastest-sut-back
+	url = https://github.com/DavidCorreas/tfg-elastest-sut-back.git

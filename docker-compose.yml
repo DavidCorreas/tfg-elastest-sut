@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  angular: 
+    build: tfg-elastest-sut-front
+    ports:
+      - "4200:4200"
+
+  express:
+    build: tfg-elastest-sut-back
+    ports:
+      - "3000:3000"
+    networks: 
+      - net
+    depends_on: 
+      - database
+
+  database: 
+    image: mongo 
+    ports:
+      - "27017:27017"
+    networks: 
+      - net
+    restart: always
+
+networks: 
+  net:
+    
