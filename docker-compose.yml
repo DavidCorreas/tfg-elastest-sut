@@ -29,6 +29,6 @@ networks:
 
   emulator:
     external:
-        name: docker_envoymesh
+        name: tfg-elastest_envoymesh
     
     
