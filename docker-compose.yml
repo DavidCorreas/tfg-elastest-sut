@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   angular: 
@@ -12,6 +12,7 @@ services:
       - "3000:3000"
     networks: 
       - net
+      - emulator
     depends_on: 
       - database
 
@@ -24,5 +25,10 @@ services:
     restart: always
 
 networks: 
-  net:
+  net: {}
+
+  emulator:
+    external:
+        name: docker_envoymesh
+    
     
