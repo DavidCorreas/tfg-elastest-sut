@@ -3,29 +3,32 @@ version: '3.7'
 services:
   angular: 
     build: tfg-elastest-sut-front
-    ports:
-      - "4200:4200"
+    networks: 
+      sut:
+        aliases: 
+          - angular
 
   express:
     build: tfg-elastest-sut-back
-    ports:
-      - "3000:3000"
     networks: 
-      - net
-      - emulator
+      sut:
+        aliases: 
+          - express
+      emulator:
+        aliases: 
+          - express
     depends_on: 
       - database
 
   database: 
-    image: mongo 
-    ports:
-      - "27017:27017"
+    image: tfgelastest/mongodb
     networks: 
-      - net
+      - sut
     restart: always
 
 networks: 
-  net: {}
+  sut:
+    name: tfg-elastest_sut
 
   emulator:
     external:
