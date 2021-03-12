@@ -7,3 +7,4 @@
 [submodule "tfg-elastest-sut-cordova_app"]
 	path = tfg-elastest-sut-cordova_app
 	url = https://github.com/DavidCorreas/tfg-elastest-sut-cordova_app.git
+	branch = no-emulator
